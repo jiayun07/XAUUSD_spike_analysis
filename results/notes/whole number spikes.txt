@@ -1,0 +1,18 @@
+near_integer  False  True 
+spike
+False         90772  63048
+True           7765   5358
+chi2 = 0.12004023292122949
+p = 0.7289908577945152
+phi = 0.0008479676962778004
+
+P(spike | near_integer=True)
+=  5358 / (63048 + 5358)
+≈ 7.83%
+
+P(spike | near_integer=False)
+= 7765 / (90772 + 7765)
+≈ 7.88%
+7.88% / 7.83% = 1.006
+
+Spikes appears as the same frequency near whole numbers.

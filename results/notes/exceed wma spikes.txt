@@ -1,0 +1,19 @@
+exceed_wma   False  True 
+spike
+False       135766  18054
+True         12564    559
+chi2 = 681.6938217858398
+p = 2.861396529945704e-150
+phi = 0.06390142929289883
+
+P(spike | exceed_wma=True)
+=  559 / (18054 + 559)
+≈ 3.00%
+
+P(spike | exceed_wma=False)
+=  12564 / (135766 + 12564)
+≈ 8.47%
+
+8.47% / 3.00% = 2.82
+
+Spikes appars 2.82 times more frquent when the closing price doesn't exceed the weighted moving average.

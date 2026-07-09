@@ -1,0 +1,9 @@
+spike               False  True 
+previous_is_spike
+False              141721  12098
+True                12098   1025
+chi2 = 0.042135466325613026
+p = 0.8373617649121909
+phi = 0.0005023901273173621
+
+The appearance of spike won't affect the probability of the appearance of spike in the next minute.

@@ -1,0 +1,18 @@
+exceed_wma_prev   False  True 
+spike
+False            136724  17096
+True              11603   1520
+chi2 = 2.6308217406193406
+p = 0.10480745758822609
+phi = 0.003969735803478703
+
+
+drop_wma_prev   False  True
+spike
+False          136650  17170
+True            11677   1446
+chi2 = 0.23729338392956115
+p = 0.6261678464144108
+phi = 0.001192226327666608
+
+No notable increase or decrease on the frequency of appearance of spikes 1 min after the close price exceed or drop below the moving average.

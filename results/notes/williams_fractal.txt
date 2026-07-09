@@ -1,0 +1,41 @@
+top     False  True 
+spike
+False  134110  19710
+True    10844   2279
+chi2 = 218.74697105987357
+p = 1.6970890299525e-49
+phi = 0.03619819516887996
+P(spike | top = true) = 0.10364273045613716
+P(spike | top = false) = 0.07480993970500986
+Spike appears 38.54% more frequent at local peaks.
+bottom   False  True
+spike
+False   134122  19698
+True     10690   2433
+chi2 = 345.2320514540315
+p = 4.6285829299375355e-77
+phi = 0.04547486805955442
+P(spike | bottom = true) = 0.10993628846414531
+P(spike | bottom = false) = 0.0738198491837693
+Spike appears 48.93% more frequent at local valleys.
+
+prev_top   False  True 
+spike
+False     133378  20441
+True       11575   1548
+chi2 = 23.433405972501124
+p = 1.2931334875004935e-06
+phi = 0.01184772328320384
+P(spike | prev_top = true) = 0.07039883578152713
+P(spike | prev_top = false) = 0.07985346974536574
+Spike appears 11.84% less frequent after local peaks.
+prev_bottom   False  True 
+spike
+False        133132  20687
+True          11679   1444
+chi2 = 62.66360467807698
+p = 2.452052957148676e-15
+phi = 0.01937424916789159
+P(spike | prev_bottom = true) = 0.06524784239302336
+P(spike | prev_bottom = false) = 0.0806499506252978
+Spike appears 19.1% less frequent after local valleys.

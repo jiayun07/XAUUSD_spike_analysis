@@ -1,0 +1,14 @@
+near_integer   False  True 
+spike
+False         134429  52441
+True           23422  15965
+P(spike | near_integer=True)
+= 15965 / (52441 + 15965)
+≈ 23.3%
+
+P(spike | near_integer=False)
+= 23422 / (134429 + 23422)
+≈ 14.8%
+23.3%/14.8% = 57.7%
+
+Spikes appears 57% more frequent near whole numbers.

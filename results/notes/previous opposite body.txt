@@ -1,0 +1,9 @@
+prev_opposite  False  True 
+spike
+False          75428  78392
+True            6470   6653
+chi2 = 0.3323213567540673
+p = 0.5642953756901721
+phi = 0.0014108960556438038
+
+No obvious relationship
