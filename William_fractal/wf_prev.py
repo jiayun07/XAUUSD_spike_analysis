@@ -41,13 +41,16 @@ print("chi2 =", chi2)
 print("p =", p)
 print("phi =", phi) # -1 <= phi <= 1
 result1 = table.loc[True, True] / (table.loc[True, True] + table.loc[False, True])
-print("P(spike | prev_top = true) = " + str(result1))
+print(f"P(spike | prev_top = true) = {result1}")
 result2 = table.loc[True, False] / (table.loc[True, False] + table.loc[False, False])
-print("P(spike | prev_top = false) = " + str(result2))
+print(f"P(spike | prev_top = false) = {result2}")
 result3 = result1 / result2 - 1
-result3 *= -100
+result3 *= 100
 result3 = round(result3, 2)
-print("Spike appears " + str(result3) + "% less frequent after local peaks.")
+if result3 >=0:
+    print(f"Spike appears {result3}% more frequent after local peaks.")
+else:
+    print(f"Spike appears {-result3}% less frequent after local peaks.")
 
 table = pd.crosstab(data['spike'], data['prev_bottom'])
 chi2, p, dof, expected = chi2_contingency(table)
@@ -63,6 +66,9 @@ print("P(spike | prev_bottom = true) = " + str(result1))
 result2 = table.loc[True, False] / (table.loc[True, False] + table.loc[False, False])
 print("P(spike | prev_bottom = false) = " + str(result2))
 result3 = result1 / result2 - 1
-result3 *= -100
+result3 *= 100
 result3 = round(result3, 2)
-print("Spike appears " + str(result3) + "% less frequent after local valleys.")
+if result3 >=0:
+    print(f"Spike appears {result3}% more frequent after local valleys.")
+else:
+    print(f"Spike appears {-result3}% less frequent after local valleys.")

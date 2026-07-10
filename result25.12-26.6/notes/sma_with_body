@@ -1,0 +1,21 @@
+prev_cross   False  True
+spike
+False       150188   3632
+True         12823    300
+chi2 = 0.2650602145729846
+p = 0.6066648386239615
+phi = 0.0012600511231822063
+P(spike | prev_cross = true) = 0.0762970498474059
+P(spike | prev_cross = false) = 0.07866340308322751
+Spike appears 3.01% less frequent after SMA50 crosses the body.
+(.venv) PS D:\python\pythonproject\XAUUSD_spike> python sma_analysis//sma_with_body.py
+prev_cross   False  True
+spike
+False       141394  12426
+True         12109   1014
+chi2 = 1.9695798480863576
+p = 0.1604924657803658
+phi = 0.003434809767693347
+P(spike | prev_cross = true) = 0.07544642857142857
+P(spike | prev_cross = false) = 0.07888445176967225
+Spike appears 4.36% less frequent after SMA50 crosses the body.

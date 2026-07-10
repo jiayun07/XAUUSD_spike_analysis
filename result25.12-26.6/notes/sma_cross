@@ -1,0 +1,42 @@
+is_gold_cross   False  True
+spike
+False          151643   2176
+True            12940    183
+chi2 = 0.022264912550402815
+p = 0.8813845227285965
+phi = 0.00036519741163855006
+P(spike | prev_cross = true) = 0.07757524374735057
+P(spike | prev_cross = false) = 0.07862294404646895
+Spike appears 1.33% less frequent 1 min after SMA50 exceeds SMA10.
+is_dead_cross   False  True
+spike
+False          151628   2191
+True            12955    168
+chi2 = 1.702916321118746
+p = 0.19190702713598512
+phi = 0.0031938450899758114
+P(spike | prev_cross = true) = 0.0712166172106825
+P(spike | prev_cross = false) = 0.07871408347156146
+Spike appears 9.52% less frequent 1 min after SMA50 exceeds SMA10.
+
+is_gold_cross   False  True
+spike
+False          151627   2192
+True            12955    167
+chi2 = 1.9072968600692806
+p = 0.16726383720487314
+phi = 0.0033800851543259926
+P(spike | prev_cross = true) = 0.07079270877490462
+P(spike | prev_cross = false) = 0.07871456173822168
+Spike appears 10.06% less frequent 2 min after SMA50 exceeds SMA10.
+is_dead_cross   False  True
+spike
+False          151641   2178
+True            12941    181
+chi2 = 0.0913974200448823
+p = 0.7624080859794665
+phi = 0.000739921186785704
+P(spike | prev_cross = true) = 0.07672742687579483
+P(spike | prev_cross = false) = 0.07862949775795652
+Spike appears 2.42% less frequent 2 min after SMA50 exceeds SMA10.
+
