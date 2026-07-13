@@ -20,19 +20,18 @@ for file in files:
     m1['body_low'] = m1[['open', 'close']].min(axis = 1)
     m1['upper_shadow'] = m1['high'] - m1['body_high']
     m1['lower_shadow'] = m1['body_low'] - m1['low']
-    m1['spike'] = (
-            (
+    m1['spike_above'] = (
                     (m1['upper_shadow'] >= 2 * m1['abs_body'])
                     &
                     (m1['lower_shadow'] < 0.1 * (m1['high'] - m1['low']))
             )
-            |
-            (
-                            (m1['lower_shadow'] >= 2 * m1['abs_body'])
-                            &
-                            (m1['upper_shadow'] < 0.1 * (m1['high'] - m1['low']))
-            )
+    m1['spike_below'] = (
+            (m1['lower_shadow'] >= 2 * m1['abs_body'])
+            &
+            (m1['upper_shadow'] < 0.1 * (m1['high'] - m1['low']))
     )
+    m1['spike'] = (m1['spike_above'] | m1['spike_below'])
+
     window = 10 # 计算移动平均线
     weights = np.arange(1, window + 1)
     m1['WMA10'] = (m1['close'].rolling(window).apply(lambda x: np.dot(x, weights)/ weights.sum(), raw = True)) # weighted moving average
@@ -41,13 +40,19 @@ for file in files:
 m1_data = pd.concat(m1_list)
 m1_data = m1_data.sort_index()
 m1_data.dropna(subset = ['open', 'close'], inplace = True) # drop empty ticks (00:00 - 01:00)
+m1_data.drop(m1_data[m1_data['close'].diff() > 100].index, inplace = True) # remove possible wrong data
+# print(m1_data.info())
+
 '''
-pd.set_option('display.max_rows', None)      # 显示所有行
-pd.set_option('display.max_columns', None)   # 显示所有列
-pd.set_option('display.width', None)         # 自动调整显示宽度
-pd.set_option('display.max_colwidth', None)  # 不截断列内容
+pd.set_option('display.max_rows', None)      # display all rows
+pd.set_option('display.max_columns', None)   # display all cols
+pd.set_option('display.width', None)         # adjust width
+pd.set_option('display.max_colwidth', None) 
 print(m1_data)
 '''
+
+
+
 
 
 

@@ -7,8 +7,8 @@ custom_bins = pd.cut(ages, bins=custom_edges)
 print(custom_bins)
 '''
 # Sample data
-df = pd.DataFrame({'sales': [10, 21, 33, 46, 50, 60]})
+df = pd.DataFrame({'sales': [True, False, True, False, False, True]})
 
-# Calculate a 3-row rolling mean
-df['prev2_diff'] = df['sales'].shift(2).diff()
+
+df['prev2_diff'] = df[df['sales'].shift(-1)]
 print(df)
