@@ -1,3 +1,4 @@
+# analyze whether the continuous increase of high price gives a changing probability of spikes
 import tick_data
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,7 +13,7 @@ data['exceed_2'] = (
 categories = []
 values = []
 for i in range(3, 8):
-    categories.append(f'exceed{i - 1}')
+    categories.append(f'exceed_{i - 1}')
     table = pd.crosstab(data['spike_below'], data[f'exceed_{i - 1}']) # can be modified to spike_below
     ratio = table.loc[True, True] / (table.loc[True, True] + table.loc[False, True])  # return P(spike | exceed_i = true)
     values.append(ratio)
@@ -21,7 +22,8 @@ for i in range(3, 8):
 categories.append('All Time')
 values.append(data['spike_below'].mean()) # can be modified to spike_below
 # plot the graph
-plt.bar(categories, values, color='skyblue', edgecolor='black')
+bars = plt.bar(categories, values, color='skyblue', edgecolor='black')
+plt.bar_label(bars, fmt='%.3f', padding=3)
 plt.title('Ratio of Spikes Below when the High Price Increases')
 plt.xlabel('Time Interval')
 plt.ylabel('Ratio of Spikes')

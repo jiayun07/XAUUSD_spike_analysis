@@ -1,16 +1,8 @@
 # check if the frequency of occurrence of spike changes after two sma lines crosses each other
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-import tick_data
+from sma import data
 import pandas as pd
 from scipy.stats import chi2_contingency
 import numpy as np
-
-data = tick_data. m1_data
-
-data['SMA10'] = data['close'].rolling(10).mean()
-data['SMA50'] = data['close'].rolling(50).mean()
 
 data['is_gold_cross'] = (
     (data['SMA10'].shift(1) >= data['SMA50']. shift(1))
