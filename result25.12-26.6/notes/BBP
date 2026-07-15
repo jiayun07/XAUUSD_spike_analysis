@@ -1,0 +1,21 @@
+bear_up   False  True
+spike
+False    142816  11003
+True      11955   1168
+chi2 = 54.3520134643269
+p = 1.6760617565632527e-13
+phi = 0.018043675683032053
+P(spike | bear - to + = true) = 0.09596582039273684
+P(spike | bear - to + = false) = 0.07724315278702082
+Spike appears 24.24% more frequent after bear power changes from - to +.
+bull_down   False  True
+spike
+False      143054  10765
+True        11933   1190
+chi2 = 77.58611791932496
+p = 1.270600066269982e-18
+phi = 0.021558036605018805
+P(spike | bull + to - = true) = 0.09953994144709327
+P(spike | bull + to - = false) = 0.07699355429810242
+Spike appears 29.28% more frequent after bull power changes from + to -.
+

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 data = tick_data.m1_data
 data['typical_price'] = (data['high'] + data['low']+ data['close']) / 3
-data['SMA20_TP'] = data['typical_price'].rolling(20).mean() # caculate the sma of TP with a period of 20
+data['SMA20_TP'] = data['typical_price'].rolling(20).mean() # calculate the sma of TP with a period of 20
 data['deviation'] = (data['typical_price'] - data['SMA20_TP']).abs()
 data['mean_deviation'] = data['deviation'].rolling(20).mean()
 

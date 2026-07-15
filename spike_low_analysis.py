@@ -24,7 +24,7 @@ values.append(data['spike_above'].mean()) # can be modified to spike_below
 # plot the graph
 bars = plt.bar(categories, values, color='skyblue', edgecolor='black')
 plt.bar_label(bars, fmt='%.3f', padding=3)
-plt.title('Ratio of Spikes Below when the Low Price Decreases')
+plt.title('Ratio of Spikes Above when the Low Price Decreases')
 plt.xlabel('Time Interval')
 plt.ylabel('Ratio of Spikes')
 plt.show()
