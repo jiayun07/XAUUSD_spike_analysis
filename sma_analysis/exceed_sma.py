@@ -1,5 +1,5 @@
 #analyze the probability of the occurrence of spikes when the highest price exceeds the sma
-from sma import data
+from sma_calc import data
 import pandas as pd
 import matplotlib.pyplot as plt
 

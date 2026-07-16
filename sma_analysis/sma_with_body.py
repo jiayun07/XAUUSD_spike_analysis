@@ -2,7 +2,7 @@
 import pandas as pd
 from scipy.stats import chi2_contingency
 import numpy as np
-from sma import data
+from sma_calc import data
 
 data['prev_cross'] = (
     (

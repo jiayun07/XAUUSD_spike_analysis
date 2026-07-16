@@ -1,5 +1,5 @@
 # check if the frequency of occurrence of spike changes after two sma lines crosses each other
-from sma import data
+from sma_calc import data
 import pandas as pd
 from scipy.stats import chi2_contingency
 import numpy as np

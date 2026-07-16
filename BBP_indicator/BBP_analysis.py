@@ -1,5 +1,5 @@
 # analyze whether spikes occurs more when the bull/bear power changes sign
-from BBP import data
+from BBP_calc import data
 import pandas as pd
 from scipy.stats import chi2_contingency
 import numpy as np

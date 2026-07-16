@@ -14,7 +14,7 @@ average_loss = tick_data. m1_data['loss'].rolling(14).mean()
 
 RS = average_gain / average_loss
 tick_data. m1_data['RSI'] = 100 - 100 / (1 + RS)
-
+data = tick_data. m1_data
 
 '''
 ax = counts_all.plot(kind='bar')

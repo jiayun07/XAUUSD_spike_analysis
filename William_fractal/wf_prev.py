@@ -1,32 +1,9 @@
 # analyse if spike appears more frequent after local peaks and valleys when the William fractal is used
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-import tick_data
+from wf_calc import data
 import pandas as pd
 from scipy.stats import chi2_contingency
 import numpy as np
 
-data = tick_data.m1_data
-data['top'] = (
-    (data['high'].shift(2) < data['high'])
-    &
-    (data['high'].shift(1) < data['high'])
-    &
-    (data['high'].shift(-1) < data['high'])
-    &
-    (data['high'].shift(-2) < data['high'])
-)
-
-data['bottom'] = (
-    (data['low'].shift(2) > data['low'])
-    &
-    (data['low'].shift(1) > data['low'])
-    &
-    (data['low'].shift(-1) > data['low'])
-    &
-    (data['low'].shift(-2) > data['low'])
-)
 data['prev_top'] = data['top'].shift(1)
 data['prev_bottom'] = data['bottom'].shift(1)
 spikes = data[data['spike']]

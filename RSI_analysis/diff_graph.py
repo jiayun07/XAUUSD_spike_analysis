@@ -1,9 +1,8 @@
-import RSI_analysis
+from RSI_calc import data
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
-data = RSI_analysis. tick_data. m1_data
 data['prev_diff'] = data['RSI'].shift(1).diff()
 
 bins = [-50, -45, -40, -35, -30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]

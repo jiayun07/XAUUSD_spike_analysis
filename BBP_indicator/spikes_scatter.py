@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from BBP import data
+from BBP_calc import data
 
 spikes = data[data['spike']]
 bull_power = spikes['bull_pwr']

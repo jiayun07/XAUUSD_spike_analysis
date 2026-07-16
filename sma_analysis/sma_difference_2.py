@@ -1,5 +1,5 @@
 # analysis of the difference of value between SMA p = 10 and p = 50
-from sma import data
+from sma_calc import data
 import pandas as pd
 import matplotlib.pyplot as plt
 
