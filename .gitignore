@@ -1,5 +1,6 @@
 # Ignore data files
 data/
+test/
 
 # Python
 __pycache__/

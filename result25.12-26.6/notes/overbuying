@@ -1,0 +1,40 @@
+prev_overselling  False   True
+spike_below
+False             25931  134119
+True               1085    5807
+chi2 = 0.9923903259555671
+p = 0.3191588588962984
+phi = 0.0024381389636442432
+P(spike | prev_overselling = true) = 0.04150050741106013
+P(spike | prev_overselling = false) = 0.04016138584542493
+Spike appears 3.33% more frequent after a stick with RSI < 30 all the time.
+prev_overselling2  False   True
+spike_below
+False              33792  126258
+True                1421    5471
+chi2 = 0.9443556694747093
+p = 0.33116018661529556
+phi = 0.0023784005132479083
+P(spike | prev_overselling2 = true) = 0.04153223663733878
+P(spike | prev_overselling2 = false) = 0.04035441456280351
+Spike appears 2.92% more frequent after 2 stick with RSI < 30 all the time.
+prev_overbuying  False   True
+spike_above
+False            22824  137887
+True               854    5377
+chi2 = 1.1730864744058656
+p = 0.27876795957319866
+phi = 0.002650832018531189
+P(spike | prev_overbuying = true) = 0.037532108554835825
+P(spike | prev_overbuying = false) = 0.03606723540839598
+Spike appears 4.06% more frequent after a stick with RSI > 70 all the time.
+prev_overbuying2  False   True
+spike_above
+False             48720  111991
+True               1891    4340
+chi2 = 0.00172343688794948
+p = 0.9668858950097947
+phi = 0.00010160495458072387
+P(spike | prev_overbuying2 = true) = 0.03730733854260687
+P(spike | prev_overbuying2 = false) = 0.03736341901958072
+Spike appears 0.15% less frequent after 2 stick with RSI > 70 all the time.
